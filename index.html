@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Independence Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --white: #FFFFFF;
+            --green: #138808;
+            --navy: #000080;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image1.gif') no-repeat center center;
+            background-size: cover;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .header {
+            padding: 5px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .top-gif {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%; /* गोल आकार के लिए */
+            border: 3px solid var(--white);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .animated-text {
+            font-size: 2.8em;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            background: linear-gradient(90deg, var(--saffron), var(--white), var(--green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.7; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .name-input-container {
+            margin-top: 20px;
+        }
+
+        #nameInput {
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid var(--saffron);
+            background-color: rgba(0,0,0,0.4);
+            color: var(--white);
+            text-align: center;
+            width: 80%;
+            max-width: 280px;
+            font-size: 1em;
+        }
+        #nameInput::placeholder { color: rgba(255,255,255,0.7); }
+
+        #displayName {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: 700;
+            min-height: 27px;
+            text-shadow: 1px 1px 3px var(--navy);
+        }
+
+        .gift-button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--navy);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            background: linear-gradient(45deg, var(--saffron), var(--white), var(--green));
+            background-size: 200% 200%;
+            animation: gradient-shine 3s ease infinite;
+            box-shadow: 0 0 20px rgba(255, 153, 51, 0.8);
+        }
+
+        @keyframes gradient-shine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .share-buttons {
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .share-btn:hover { transform: scale(1.05); }
+
+        .whatsapp-btn { background-color: #25D366; }
+        .facebook-btn { background-color: #1877F2; }
+        
+        .ad-container {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            top: -20px;
+            animation: fall linear forwards;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p style="margin:0;">Gulshan remixer</p>
+        </div>
+
+        <!-- Adsterra Ad Code - Top -->
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '1972590361613ad8673f5c9369c50afc',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/1972590361613ad8673f5c9369c50afc/invoke.js"></script>
+        </div>
+
+        <div class="main-content">
+            <img src="image.gif" alt="Independence Day GIF" class="top-gif">
+
+            <h1 class="animated-text">Happy Independence Day</h1>
+
+            <div class="name-input-container">
+                <input type="text" id="nameInput" placeholder="यहाँ अपना नाम लिखें" onkeyup="updateName()">
+                <p id="displayName"></p>
+            </div>
+
+            <a href="https://amzn.to/45iDgDs" class="gift-button" target="_blank">Free Gift 🎁 Claim</a>
+
+            <div class="share-buttons">
+                <a href="#" id="whatsapp-share" class="share-btn whatsapp-btn">WhatsApp पर भेजें</a>
+                <a href="#" id="facebook-share" class="share-btn facebook-btn" target="_blank">Facebook पर भेजें</a>
+            </div>
+        </div>
+
+        <!-- Adsterra Ad Code - Bottom -->
+        <div class="ad-container">
+             <script type="text/javascript">
+                atOptions = {
+                    'key' : '1972590361613ad8673f5c9369c50afc',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/1972590361613ad8673f5c9369c50afc/invoke.js"></script>
+        </div>
+    </div>
+
+    <script>
+        // Confetti Effect
+        const confettiColors = ['#FF9933', '#FFFFFF', '#138808'];
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+            confetti.style.animationDuration = Math.random() * 3 + 4 + 's'; // Slower fall
+            confetti.style.opacity = Math.random();
+            document.body.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 7000); // Remove after animation
+        }
+        setInterval(createConfetti, 150);
+
+        // Name and Share functionality
+        function updateName() {
+            var name = document.getElementById('nameInput').value;
+            var displayNameElement = document.getElementById('displayName');
+            if (name) {
+                displayNameElement.innerText = name + " की तरफ से";
+            } else {
+                displayNameElement.innerText = "";
+            }
+            updateShareLinks(name);
+        }
+
+        function updateShareLinks(name) {
+            var greetingText = "आपको स्वतंत्रता दिवस की हार्दिक शुभकामनाएँ!";
+            var message = name ? name + " आपको स्वतंत्रता दिवस की शुभकामनाएं भेज रहे हैं।" : greetingText;
+            var websiteUrl = "https://www.blogger.com/u/2/blog/posts/8307271961048140540?hl=en-GB"; // अपनी वेबसाइट का URL यहाँ डालें
+            
+            var fullMessage = encodeURIComponent(message + " यहाँ देखें: " + websiteUrl);
+            
+            document.getElementById('whatsapp-share').href = "whatsapp://send?text=" + fullMessage;
+            document.getElementById('facebook-share').href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(websiteUrl) + "&quote=" + encodeURIComponent(message);
+        }
+        updateName();
+    </script>
+</body>
+</html>
